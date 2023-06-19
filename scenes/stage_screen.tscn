@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://bpt6vckatysd3"]
+
+[ext_resource type="Script" path="res://scenes/stage_screen.gd" id="1_3mfxy"]
+[ext_resource type="Texture2D" uid="uid://d11kvc0k3ue0f" path="res://resources/images/bg-image.jpg" id="2_rsc4x"]
+
+[node name="stageScreen" type="Node2D"]
+script = ExtResource("1_3mfxy")
+
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(564, 383)
+scale = Vector2(0.634375, 0.634375)
+texture = ExtResource("2_rsc4x")
+metadata/_edit_lock_ = true
+
+[node name="esmaecer" type="ColorRect" parent="."]
+offset_left = -249.0
+offset_top = -95.0
+offset_right = 1467.0
+offset_bottom = 875.0
+color = Color(0.258824, 0.258824, 0.258824, 0.529412)
+metadata/_edit_lock_ = true

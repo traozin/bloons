@@ -1,10 +1,14 @@
-[gd_scene load_steps=11 format=3 uid="uid://dar6xqgpny8wl"]
+[gd_scene load_steps=15 format=3 uid="uid://dar6xqgpny8wl"]
 
 [ext_resource type="Script" path="res://scripts/start_screen.gd" id="1_g7wcu"]
 [ext_resource type="Texture2D" uid="uid://d11kvc0k3ue0f" path="res://resources/images/bg-image.jpg" id="2_5wu6p"]
+[ext_resource type="Script" path="res://scripts/startBtn.gd" id="3_3lnaj"]
 [ext_resource type="Texture2D" uid="uid://bigm5qbjkqp08" path="res://resources/images/logo.png" id="3_d1skc"]
 [ext_resource type="Texture2D" uid="uid://ykjkrflqustc" path="res://resources/icons/award.png" id="3_lrsvx"]
+[ext_resource type="Script" path="res://scripts/quitBtn.gd" id="4_kuvpy"]
 [ext_resource type="Texture2D" uid="uid://p3dhjsqa144o" path="res://resources/icons/settings.png" id="4_u7g1b"]
+[ext_resource type="Script" path="res://scripts/awardBtn.gd" id="6_chdmv"]
+[ext_resource type="Script" path="res://scripts/settingBtn.gd" id="8_42qkn"]
 
 [sub_resource type="Theme" id="Theme_7b0gu"]
 Button/colors/font_color = Color(0.875, 0.875, 0.875, 1)
@@ -51,7 +55,7 @@ offset_bottom = 875.0
 color = Color(0, 0, 0, 0.529412)
 metadata/_edit_lock_ = true
 
-[node name="esmaecer2" type="ColorRect" parent="."]
+[node name="esmaecer_options" type="ColorRect" parent="."]
 layout_mode = 0
 offset_left = 1078.0
 offset_top = 11.0
@@ -91,6 +95,7 @@ text = "CONTINUAR
 
 [node name="startBtn" type="Button" parent="control"]
 layout_mode = 2
+mouse_default_cursor_shape = 2
 theme = SubResource("Theme_7b0gu")
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(1, 0.278431, 0, 1)
@@ -102,9 +107,11 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_kedi2")
 theme_override_styles/focus = SubResource("StyleBoxFlat_yumk6")
 text = "INICIAR
 "
+script = ExtResource("3_3lnaj")
 
 [node name="quitBtn" type="Button" parent="control"]
 layout_mode = 2
+mouse_default_cursor_shape = 2
 theme = SubResource("Theme_7b0gu")
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(1, 0.278431, 0, 1)
@@ -115,22 +122,29 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_8t82l")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_kedi2")
 theme_override_styles/focus = SubResource("StyleBoxFlat_yumk6")
 text = "SAIR"
+script = ExtResource("4_kuvpy")
 
 [node name="awardBtn" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 1085.0
 offset_top = 20.0
 offset_right = 1597.0
 offset_bottom = 532.0
 scale = Vector2(0.1, 0.1)
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource("3_lrsvx")
+script = ExtResource("6_chdmv")
 
 [node name="settingBtn" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 1084.0
 offset_top = 77.0
 offset_right = 1596.0
 offset_bottom = 589.0
 scale = Vector2(0.1, 0.1)
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource("4_u7g1b")
+script = ExtResource("8_42qkn")
 
 [node name="logo" type="Sprite2D" parent="."]
 position = Vector2(593, 237)
