@@ -1,0 +1,138 @@
+[gd_scene load_steps=11 format=3 uid="uid://dar6xqgpny8wl"]
+
+[ext_resource type="Script" path="res://scripts/start_screen.gd" id="1_g7wcu"]
+[ext_resource type="Texture2D" uid="uid://d11kvc0k3ue0f" path="res://resources/images/bg-image.jpg" id="2_5wu6p"]
+[ext_resource type="Texture2D" uid="uid://bigm5qbjkqp08" path="res://resources/images/logo.png" id="3_d1skc"]
+[ext_resource type="Texture2D" uid="uid://ykjkrflqustc" path="res://resources/icons/award.png" id="3_lrsvx"]
+[ext_resource type="Texture2D" uid="uid://p3dhjsqa144o" path="res://resources/icons/settings.png" id="4_u7g1b"]
+
+[sub_resource type="Theme" id="Theme_7b0gu"]
+Button/colors/font_color = Color(0.875, 0.875, 0.875, 1)
+Button/colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
+Button/colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pfx8b"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8t82l"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kedi2"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yumk6"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="startScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_right = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_g7wcu")
+metadata/_edit_lock_ = true
+
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(564, 383)
+scale = Vector2(0.634375, 0.634375)
+texture = ExtResource("2_5wu6p")
+metadata/_edit_lock_ = true
+
+[node name="esmaecer" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -249.0
+offset_top = -95.0
+offset_right = 1467.0
+offset_bottom = 875.0
+color = Color(0, 0, 0, 0.529412)
+metadata/_edit_lock_ = true
+
+[node name="esmaecer2" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 1078.0
+offset_top = 11.0
+offset_right = 1141.0
+offset_bottom = 140.0
+color = Color(1, 1, 1, 0.529412)
+metadata/_edit_lock_ = true
+
+[node name="control" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.715
+anchor_right = 0.5
+anchor_bottom = 0.715
+offset_left = -72.0
+offset_top = -83.32
+offset_right = 72.0
+offset_bottom = 88.68
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="continueBtn" type="Button" parent="control"]
+visible = false
+layout_mode = 2
+theme = SubResource("Theme_7b0gu")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.278431, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 0, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_pfx8b")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8t82l")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_kedi2")
+theme_override_styles/focus = SubResource("StyleBoxFlat_yumk6")
+text = "CONTINUAR
+"
+
+[node name="startBtn" type="Button" parent="control"]
+layout_mode = 2
+theme = SubResource("Theme_7b0gu")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.278431, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 0, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_pfx8b")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8t82l")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_kedi2")
+theme_override_styles/focus = SubResource("StyleBoxFlat_yumk6")
+text = "INICIAR
+"
+
+[node name="quitBtn" type="Button" parent="control"]
+layout_mode = 2
+theme = SubResource("Theme_7b0gu")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.278431, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 0, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_pfx8b")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8t82l")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_kedi2")
+theme_override_styles/focus = SubResource("StyleBoxFlat_yumk6")
+text = "SAIR"
+
+[node name="awardBtn" type="TextureButton" parent="."]
+offset_left = 1085.0
+offset_top = 20.0
+offset_right = 1597.0
+offset_bottom = 532.0
+scale = Vector2(0.1, 0.1)
+texture_normal = ExtResource("3_lrsvx")
+
+[node name="settingBtn" type="TextureButton" parent="."]
+offset_left = 1084.0
+offset_top = 77.0
+offset_right = 1596.0
+offset_bottom = 589.0
+scale = Vector2(0.1, 0.1)
+texture_normal = ExtResource("4_u7g1b")
+
+[node name="logo" type="Sprite2D" parent="."]
+position = Vector2(593, 237)
+scale = Vector2(0.929333, 0.929333)
+texture = ExtResource("3_d1skc")
