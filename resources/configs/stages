@@ -1,0 +1,95 @@
+[
+  {
+    "number": 1,
+    "letters": ["f", "j"]
+  },
+  {
+    "number": 2,
+    "letters": ["d", "k"]
+  },
+  {
+    "number": 3,
+    "letters": ["f", "j", "k", "d"]
+  },
+  {
+    "number": 4,
+    "letters": ["s", "l"]
+  },
+  {
+    "number": 5,
+    "letters": ["a", "ç"]
+  },
+  {
+    "number": 6,
+    "letters": ["a", "s", "d", "f"]
+  },
+  {
+    "number": 7,
+    "letters": ["j", "k", "l", "ç"]
+  },
+  {
+    "number": 8,
+    "letters": ["a", "s", "d", "f", "j", "k", "l", "ç"]
+  },
+  {
+    "number": 9,
+    "letters": ["g", "h"]
+  },
+  {
+    "number": 10,
+    "letters": ["a", "s", "d", "f", "g", "h", "k", "l", "ç"]
+  },
+  {
+    "number": 11,
+    "letters": ["r", "u"]
+  },
+  {
+    "number": 12,
+    "letters": ["e", "i"]
+  },
+  {
+    "number": 13,
+    "letters": ["w", "o"]
+  },
+  {
+    "number": 14,
+    "letters": ["q", "y"]
+  },
+  {
+    "number": 15,
+    "letters": ["p", "t"]
+  },
+  {
+    "number": 16,
+    "letters": ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p"]
+  },
+  {
+    "number": 17,
+    "letters": ["v", "m"]
+  },
+  {
+    "number": 18,
+    "letters": ["c", ","]
+  },
+  {
+    "number": 19,
+    "letters": ["v", "m", "c", ","]
+  },
+  {
+    "number": 20,
+    "letters": ["x", "."]
+  },
+  {
+    "number": 21,
+    "letters": ["z", ";"]
+  },
+  {
+    "number": 22,
+    "letters": ["b", "n"]
+  },
+  {
+    "number": 23,
+    "letters": ["z", "x", "c", "v", "b", "n", "m", ",", "."]
+  }
+]
+

@@ -1,0 +1,19 @@
+[
+  {
+    "color": "red",
+    "letters": ["q", "a", "z", "y", "h", "n", "u", "j", "m"]
+  },
+  {
+    "color": "yellow",
+    "letters": ["w", "s", "x", "i", "k", "'", ","]
+  },
+  {
+    "color": "blue",
+    "letters": ["e", "d", "c", "o", "l", "'", "."]
+  },
+  {
+    "color": "green",
+    "letters": ["r", "f", "v", "t", "g", "b", "p", "ç", ";"]
+  }
+]
+
