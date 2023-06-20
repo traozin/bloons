@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://mwvcypvxfych"
-path="res://.godot/imported/heart.png-5d1afb5bbfb127d0efa6fb6e7f2554e2.ctex"
+uid="uid://c3pp8wp2n2mif"
+path="res://.godot/imported/bloon-green.png-40f0622ecf3ba8f34740fb97f68ce5fe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/icons/heart.png"
-dest_files=["res://.godot/imported/heart.png-5d1afb5bbfb127d0efa6fb6e7f2554e2.ctex"]
+source_file="res://resources/images/bloon-green.png"
+dest_files=["res://.godot/imported/bloon-green.png-40f0622ecf3ba8f34740fb97f68ce5fe.ctex"]
 
 [params]
 

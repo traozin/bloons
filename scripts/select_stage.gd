@@ -1,6 +1,6 @@
 extends Control
 
-var stage_item_list = load("res://scenes/stage_item_list.tscn")
+var stage_item_list = preload("res://scenes/stage_item_list.tscn")
 
 func _toStageItemList(current_stage):
 	var stage = stage_item_list.instantiate();

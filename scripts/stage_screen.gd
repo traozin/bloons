@@ -28,7 +28,17 @@ func _handle_hit(pressed_key):
 	pass;
 func _handle_error(pressed_key):
 	_lifes = _lifes - 1;
+	_update_life(_lifes)
 	pass
-	
+
+func _update_life(lifes):
+	var hearts = $HBoxContainer.get_children();
+	var i = 0
+	for h in hearts:
+		if i > lifes:
+			h.texture = load("res://resources/icons/outline-heart.png")
+		i+=1
+
+
 func define_allowed_key(allowed_keys):
 	self._allowed_keys = allowed_keys
