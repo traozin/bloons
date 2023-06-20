@@ -1,0 +1,54 @@
+[gd_scene load_steps=4 format=3 uid="uid://crxwwwehdpei2"]
+
+[ext_resource type="Script" path="res://scripts/stage_item_list.gd" id="1_7pv5k"]
+[ext_resource type="Texture2D" uid="uid://d2e5o3r4r63ut" path="res://resources/icons/play.png" id="2_uss67"]
+[ext_resource type="Script" path="res://scripts/StartStageBtn.gd" id="3_88uwt"]
+
+[node name="StageItemList" type="Node2D"]
+script = ExtResource("1_7pv5k")
+
+[node name="StageItemPanel" type="Panel" parent="."]
+offset_right = 144.0
+offset_bottom = 137.0
+
+[node name="StageNumLbl" type="Label" parent="StageItemPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -0.5
+offset_top = -11.5
+offset_right = 0.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StageNameLbl" type="Label" parent="StageItemPanel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -0.5
+offset_right = 0.5
+offset_bottom = 23.0
+grow_horizontal = 2
+
+[node name="StartBtn" type="TextureButton" parent="StageItemPanel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -28.0
+offset_top = -47.0
+offset_right = 484.0
+offset_bottom = 465.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.105, 0.105)
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("2_uss67")
+script = ExtResource("3_88uwt")

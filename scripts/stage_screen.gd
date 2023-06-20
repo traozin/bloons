@@ -30,5 +30,5 @@ func _handle_error(pressed_key):
 	_lifes = _lifes - 1;
 	pass
 	
-func _define_allowed_key():
-	pass
+func define_allowed_key(allowed_keys):
+	self._allowed_keys = allowed_keys

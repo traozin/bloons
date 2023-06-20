@@ -10,9 +10,12 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = 226.0
+offset_bottom = 249.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_aiig3")
+metadata/_edit_lock_ = true
 
 [node name="background" type="Sprite2D" parent="."]
 position = Vector2(564, 383)
@@ -21,6 +24,7 @@ texture = ExtResource("1_yjufh")
 metadata/_edit_lock_ = true
 
 [node name="esmaecer" type="ColorRect" parent="."]
+layout_mode = 0
 offset_left = -249.0
 offset_top = -95.0
 offset_right = 1467.0
@@ -29,9 +33,23 @@ color = Color(0, 0, 0, 0.529412)
 metadata/_edit_lock_ = true
 
 [node name="backBtn" type="TextureButton" parent="."]
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 scale = Vector2(0.1, 0.1)
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("2_f4n04")
 script = ExtResource("3_i60w1")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 2
+offset_left = 57.0
+offset_top = 125.0
+offset_right = 1104.0
+offset_bottom = 603.0
+
+[node name="GridContainer" type="GridContainer" parent="ScrollContainer"]
+custom_minimum_size = Vector2(1045, 3000)
+layout_direction = 2
+layout_mode = 2
+columns = 5

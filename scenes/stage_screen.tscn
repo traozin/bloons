@@ -1,10 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://bpt6vckatysd3"]
 
-[ext_resource type="Script" path="res://scenes/stage_screen.gd" id="1_3mfxy"]
+[ext_resource type="Script" path="res://scripts/stage_screen.gd" id="1_5l58s"]
 [ext_resource type="Texture2D" uid="uid://d11kvc0k3ue0f" path="res://resources/images/bg-image.jpg" id="2_rsc4x"]
 
 [node name="stageScreen" type="Node2D"]
-script = ExtResource("1_3mfxy")
+script = ExtResource("1_5l58s")
 
 [node name="background" type="Sprite2D" parent="."]
 position = Vector2(564, 383)
