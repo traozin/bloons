@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
+uid="uid://bttpjcoe0csyx"
+=======
 uid="uid://bnsm5f3woyrsa"
+>>>>>>> 89630aaa612cca964a4e207a2e2a8ef95909ffbf
 path="res://.godot/imported/outline-heart.png-97613458227f9dcd3b68706bc49e7674.ctex"
 metadata={
 "vram_texture": false
