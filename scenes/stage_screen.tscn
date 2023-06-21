@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://54o583t4glae" path="res://resources/images/bg-image.jpg" id="2_rsc4x"]
 [ext_resource type="Texture2D" uid="uid://mwvcypvxfych" path="res://resources/icons/heart.png" id="3_03dxn"]
 
-[node name="stageScreen" type="Node2D"]
+[node name="StageScreen" type="Node2D"]
 script = ExtResource("1_5l58s")
 
 [node name="background" type="Sprite2D" parent="."]

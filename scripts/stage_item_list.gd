@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 
 func constructor(_stage_num, _stage_name, _allowed_keys):
 	get_node("StageItemPanel/StageNameLbl").text = _stage_name;

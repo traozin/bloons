@@ -5,7 +5,7 @@ var stage_item_list = preload("res://scenes/stage_item_list.tscn")
 func _toStageItemList(current_stage):
 	var stage = stage_item_list.instantiate();
 	stage.constructor(current_stage["number"], "Fase", current_stage["letters"])
-	return stage;
+	return stage
 	
 func _readStagesListFromFile():
 	var file = FileAccess.open("res://resources/configs/stages.json", FileAccess.READ);
@@ -24,7 +24,7 @@ func _readStagesListFromFile():
 func _listAllStages(stages_json):
 	var grid = $ScrollContainer/GridContainer
 	grid.set_columns(5);
-	
+
 	for current_stage_dict in stages_json:
 		var stage = _toStageItemList(current_stage_dict);
 		grid.add_child(stage);

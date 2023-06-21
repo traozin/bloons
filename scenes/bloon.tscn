@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://d08smtxj8fn0f"]
+
+[ext_resource type="Script" path="res://scripts/blue_bloon.gd" id="1_fs0w1"]
+[ext_resource type="Texture2D" uid="uid://bg0yt8reldv6" path="res://resources/images/bloon-blue.png" id="2_nm6er"]
+
+[node name="Bloon" type="Node2D"]
+script = ExtResource("1_fs0w1")
+
+[node name="BloonSprite" type="Sprite2D" parent="."]
+scale = Vector2(0.217201, 0.217201)
+texture = ExtResource("2_nm6er")
+
+[node name="letterLbl" type="Label" parent="BloonSprite"]
+offset_left = -74.0
+offset_top = -212.0
+offset_right = 78.0
+offset_bottom = -60.0
+metadata/_edit_use_anchors_ = true
