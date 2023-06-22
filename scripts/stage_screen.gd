@@ -9,22 +9,25 @@ var bloon_scene = preload("res://scenes/bloon.tscn");
 var _hits = 0;
 var _lifes = 5;
 
-var interval = 3
+var interval = 1
 
 var rules = []
+
+
+func getTextureByColor(color):
+	return load("res://resources/images/bloon-"+color+".png")
 
 func getRandomLetter():
 	var randomIndex = randi() % _allowed_keys.size()
 	return self._allowed_keys[randomIndex]
 
 func add_new_bloon():
-	print(_allowed_keys)
-	#var current_letter = getRandomLetter();
-#	var bloon_color = getBloonColorByLetter(current_letter)
+	var current_letter = getRandomLetter();
+	var bloon_color = getBloonColorByLetter(current_letter)
 	var pos = generatePositions();
 	var bloon = bloon_scene.instantiate();
-	#bloon.texture = getTextureByColor(bloon_color);
-	bloon.letter = "";	
+	bloon.letter = current_letter;	
+	bloon.get_child(0).texture = getTextureByColor(bloon_color);
 	bloon.position = pos;
 	_current_baloons.append(bloon)
 	add_child(bloon)
@@ -33,32 +36,73 @@ func update_bloon_position():
 	for bloon in _current_baloons:
 		bloon.position += Vector2(0, -1)
 
+func read_array():
+	var file = FileAccess.open("res://resources/configs/current_stage.txt", FileAccess.READ);
+	return file.get_var()
+
+func check_bloon_pos():
+	var i = 0;
+	for bloon in _current_baloons:
+		if(bloon.position.y <= 100):
+			_lifes = _lifes - 1;
+			_update_life(_lifes)
+			_current_baloons.remove_at(i)
+			bloon.queue_free()
+		i+=1
+		
 func _ready():
+	_allowed_keys = read_array()
 	rules = _readBloonColorRulesFromFile();
+	get_node("hit").text = "Acertos: " + str(_hits)
+	get_node("lastKey").text = "Last key:"
 
 func _process(delta):
 	interval = interval - delta;
 	if(interval <= 0):
 		add_new_bloon();
 		interval = 3
+	check_bloon_pos()		
 	update_bloon_position()
 	
+func map_key(key):
+	if(key == "period"):
+		return "."
+	if(key == "apostrophe"):
+		return "'"
+	if(key == "comma"):
+		return ","
+	if(key == "semicolon"):
+		return ";"
+	return key
+		
 func _input(event):
 	if !(event is InputEventKey) or !event.is_pressed():
 		return;
-	var letter = event.as_text();
-	print(letter)
+	var letter = map_key(event.as_text().to_lower());
+	get_node("lastKey").text = "Last key:" + letter
+	
 	if !_allowed_keys.has(letter) && !_current_baloons.has(letter):
 		_handle_error(letter);
 		return;
 	_handle_hit(letter);
 		
 func _handle_hit(pressed_key):
-	_hits = _hits + 1;
+	var i = 0;
+	for b in _current_baloons:
+		print("blloon l: ", b.letter)
+		if(b.letter == pressed_key):
+			print("removendo")
+			_current_baloons.remove_at(i)
+			b.queue_free()
+			_hits = _hits + 1;
+			get_node("hit").text = "Acertos: " + str(_hits)
+		i += 0
 
 func _handle_error(pressed_key):
 	_lifes = _lifes - 1;
 	_update_life(_lifes)
+	if(_lifes == 0):
+		print("GAME OVER")
 
 func _update_life(lifes):
 	var hearts = $HBoxContainer.get_children();
@@ -82,7 +126,7 @@ func _readBloonColorRulesFromFile():
 	var file = FileAccess.open("res://resources/configs/bloons.json", FileAccess.READ);
 	var file_lines = "";
 	var json = JSON.new();
-
+	
 	while file.get_position() < file.get_length():
 		file_lines += file.get_line()
 		

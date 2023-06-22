@@ -47,3 +47,15 @@ texture = ExtResource("3_03dxn")
 [node name="H5" type="TextureRect" parent="HBoxContainer"]
 layout_mode = 2
 texture = ExtResource("3_03dxn")
+
+[node name="hit" type="Label" parent="."]
+offset_left = 994.0
+offset_top = 10.0
+offset_right = 1051.0
+offset_bottom = 45.0
+
+[node name="lastKey" type="Label" parent="."]
+offset_left = 1007.0
+offset_top = 51.0
+offset_right = 1064.0
+offset_bottom = 86.0
